@@ -1,16 +1,16 @@
 import java.util.*;
-public class Factorial{
+public class OddSum {
     public static void main(String[]args){
         int number;
-        int total = 1;
+        int sum = 0;
         Scanner input = new Scanner(System.in);
         System.out.print("Enter a number: ");
         number = input.nextInt();
         input.close();
-        for(int a = 1; a <= number; a++)
+        for(int a = 1; a <= number; a += 2)
         {
-            total *= a;
+            sum += a;
         }
-        System.out.println(number + "! = " + total);
+        System.out.println("The sum of the odd numbers from 1 - " + number + " is " + sum);
     }
 }
